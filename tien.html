@@ -15,7 +15,7 @@
             <a-asset-item id="mapa" src="mapa.glb"></a-asset-item>
             <a-asset-item id="vrlentes" src="vrlentes.glb"></a-asset-item>
 
-            <audio id="mono" src="mono.mp3" preload="auto"></audio>
+            <audio id="smono" src="mono.mp3" preload="auto"></audio>
 
 
         </a-assets>
@@ -28,28 +28,28 @@
 
         <a-marker type="barcode" value="21" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity gltf-model="#mono" scale="6 6 6" rotation="0 0 90" position="0 0 0" class="clickable" gesture-handler
+            <a-entity gltf-model="#mono" scale="6 6 6" rotation="-90 0 0" position="0 1.5 0" class="clickable" gesture-handler
                 sound="src: #audiored; autoplay: false; volume: 1"></a-entity>
             <a-text value="Red" align="center" position="0 0 0" rotation="0 0 90" color="white" scale="6 6 6"></a-text>
         </a-marker>
 
         <a-marker type="barcode" value="23" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity gltf-model="#gorila" scale="0.7 0.7 0.7" rotation="0 0 90" position="0 0 0" class="clickable" gesture-handler
+            <a-entity gltf-model="#gorila" scale="0.7 0.7 0.7" rotation="-90 0 0" position="0 1.5 0" class="clickable" gesture-handler
                 sound="src: #audiored; autoplay: false; volume: 1"></a-entity>
             <a-text value="Red" align="center" position="0 0 0" rotation="0 0 90" color="white" scale="2 2 2"></a-text>
         </a-marker>
 
         <a-marker type="barcode" value="26" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity gltf-model="#r" scale="1 1 1" rotation="0 0 90" position="0 0 0" class="clickable" gesture-handler
+            <a-entity gltf-model="#r" scale="1 1 1" rotation="0 0 90" position="0 1.5 0" class="clickable" gesture-handler
                 sound="src: #audiored; autoplay: false; volume: 1"></a-entity>
             <a-text value="Red" align="center" position="0 0 0" rotation="0 0 90" color="white" scale="2 2 2"></a-text>
         </a-marker>
 
         <a-marker type="barcode" value="35" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity gltf-model="#vrlentes" scale="0.85 0.85 0.85" rotation="0 0 90" position="0 0 0" class="clickable" gesture-handler
+            <a-entity gltf-model="#vrlentes" scale="0.85 0.85 0.85" rotation="-90 0 0" position="0 1.5 0" class="clickable" gesture-handler
                 sound="src: #audiored; autoplay: false; volume: 1"></a-entity>
             <a-text value="Red" align="center" position="0 0 0" rotation="0 0 90" color="white" scale="2 2 2"></a-text>
         </a-marker>
