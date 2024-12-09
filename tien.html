@@ -15,7 +15,10 @@
             <a-asset-item id="mapa" src="mapa.glb"></a-asset-item>
             <a-asset-item id="vrlentes" src="vrlentes.glb"></a-asset-item>
 
-            <audio id="smono" src="mono.mp3" preload="auto"></audio>
+           	<audio id="amapa" src="mapa.mp3" preload="auto"></audio>
+		<audio id="smono" src="mono.mp3" preload="auto"></audio>
+		<audio id="sgorila" src="gorila.mp3" preload="auto"></audio>
+		<audio id="slentes" src="lentes.mp3" preload="auto"></audio>
 
 
         </a-assets>
@@ -40,13 +43,6 @@
             <a-text value="Red" align="center" position="0 0 0" rotation="0 0 90" color="white" scale="2 2 2"></a-text>
         </a-marker>
 
-        <a-marker type="barcode" value="26" raycaster="objects: .clickable" emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;">
-            <a-entity gltf-model="#r" scale="1 1 1" rotation="0 0 90" position="0 1.5 0" class="clickable" gesture-handler
-                sound="src: #audiored; autoplay: false; volume: 1"></a-entity>
-            <a-text value="Red" align="center" position="0 0 0" rotation="0 0 90" color="white" scale="2 2 2"></a-text>
-        </a-marker>
-
         <a-marker type="barcode" value="35" raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
             <a-entity gltf-model="#vrlentes" scale="0.8 0.8 0.8" rotation="-90 0 0" position="0 1.5 0" class="clickable" gesture-handler
@@ -61,16 +57,54 @@
     </a-scene>
 
     <script>
-			var azulAudio = document.getElementById('smono');
+			var amapa = document.getElementById('smapa');
+	    		var amomo = document.getElementById('smono');
+	    		var agorila = document.getElementById('sgorila');
+	    		var alentes = document.getElementById('slentes');
 
 			document.querySelector('[value="20"]').addEventListener('markerFound', function () {
-				amono.play();
+				amapa.play();
 			});
 
 			
 			document.querySelector('[value="20"]').addEventListener('markerLost', function () {
-				smono.pause();
-				smono.currentTime = 0; 
+				amapa.pause();
+				amapa.currentTime = 0; 
+			});
+
+
+	    		document.querySelector('[value="21"]').addEventListener('markerFound', function () {
+				amono.play();
+			});
+
+			
+			document.querySelector('[value="21"]').addEventListener('markerLost', function () {
+				amono.pause();
+				amono.currentTime = 0; 
+			});
+
+
+
+	    		document.querySelector('[value="23"]').addEventListener('markerFound', function () {
+				agorila.play();
+			});
+
+			
+			document.querySelector('[value="23"]').addEventListener('markerLost', function () {
+				agorila.pause();
+				agorila.currentTime = 0; 
+			});
+
+
+
+	    		document.querySelector('[value="35"]').addEventListener('markerFound', function () {
+				alentes.play();
+			});
+
+			
+			document.querySelector('[value="35"]').addEventListener('markerLost', function () {
+				alentes.pause();
+				alentes.currentTime = 0; 
 			});
 
 			
